@@ -150,16 +150,18 @@ body {
          Reservierung <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
+    
   </nav>
 
   
-  <!-- Mobile drawer -->
+<!-- Mobile drawer -->
 <div id="mobile-drawer" class="lg:hidden hidden fixed inset-0 z-[120]">
   <!-- Overlay -->
-  <div id="mobile-overlay" class="fixed inset-0 bg-black/40"></div>
+  <div id="mobile-overlay" class="absolute inset-0 bg-black/40 z-10"></div>
 
   <!-- Panel -->
-  <div class="fixed inset-y-0 right-0 w-full max-w-sm bg-white p-6 shadow-xl ring-1 ring-gray-900/10 overflow-y-auto">
+  <div class="absolute inset-y-0 right-0 w-full max-w-sm bg-white p-6 shadow-xl
+              ring-1 ring-gray-900/10 overflow-y-auto z-20">
     <div class="flex items-center justify-between">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only">Minicity Kindercafé</span>
@@ -1277,26 +1279,22 @@ E-Mail-Adresse: <p><a href="mailto:info@minicity.cafe">info@minicity.cafe</a></p
 
   function openDrawer() {
     drawer.classList.remove('hidden');
-    openBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden'; // scroll kilidi
+    openBtn && openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
   }
   function closeDrawer() {
     drawer.classList.add('hidden');
-    openBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = ''; // scroll aç
+    openBtn && openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   }
 
-  // Click ve touch ikisini de dinle (iOS için güvenli)
-  ['click','touchstart'].forEach(function(evt){
-    openBtn.addEventListener(evt, function(e){ e.preventDefault(); openDrawer(); }, {passive:true});
-    closeBtn.addEventListener(evt, function(e){ e.preventDefault(); closeDrawer(); }, {passive:true});
-    overlay.addEventListener(evt, function(e){ e.preventDefault(); closeDrawer(); }, {passive:true});
-  });
+  if (openBtn)  openBtn.addEventListener('click',  function(e){ e.preventDefault(); openDrawer(); });
+  if (closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeDrawer(); });
+  if (overlay)  overlay.addEventListener('click', function(){ closeDrawer(); });
 
-  // Menü içindeki anchor tıklandığında da kapat
+  // Menü linkine tıklandığında kapat
   drawer.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener('click', closeDrawer);
-    a.addEventListener('touchstart', closeDrawer, {passive:true});
   });
 })();
 </script>
