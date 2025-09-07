@@ -58,7 +58,7 @@ body {
 
 <body>
 
-<!-- Header (non-sticky, transparent, 10px üst boşluk) -->
+
 <header id="navbar" class="relative" style="background-color: #fff;">
   <nav aria-label="Global"
        class="w-full flex items-center justify-between px-6 lg:px-8 pt-[24px] py-4">
@@ -76,7 +76,7 @@ body {
 </header>
 
 
-<!-- ====== ÜST BLOK: logo + başlık + sekmeler (BEYAZ ZEMİN) ====== -->
+
 <section id="menu-header" class="bg-white">
   <div class="mx-auto max-w-7xl px-6 lg:px-8 py-6">
     
@@ -86,10 +86,10 @@ body {
     <p class="mt-2 text-center text-5xl font-black tracking-tight text-balance text-gray-900 sm:text-6xl">Unsere Speisekarte</p>
 
     <!-- Sekmeler / linkler -->
-    <div class="mt-6 flex items-center justify-center gap-8 text-sm font-semibold text-sky-900">
+    <div class="mt-6 flex items-center py-6 justify-center gap-8 text-sm font-semibold text-sky-900">
       <a href="#warme" class="relative pb-2 hover:text-sky-700">
         Warme Speisen
-        <span class="absolute left-0 -bottom-0.5 h-0.5 w-full bg-purple-400/70"></span>
+        <span class="absolute left-0 -bottom-0.5 h-0.5 w-full bg-sky-400/70"></span>
       </a>
       <a href="#desserts" class="pb-2 hover:text-sky-700">Desserts</a>
       <a href="#getraenke" class="pb-2 hover:text-sky-700">Getränke</a>
@@ -97,12 +97,11 @@ body {
   </div>
 </section>
 
-<!-- ====== MENÜ GÖVDE: full-width #fff8ee zemin ====== -->
+
 <section id="menu-body" class="w-full" style="background-color:#fff8ee;">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
 
-    <!-- NOT: Aşağıdaki içerik bloğuna kendi mevcut menü listelerini aynen bırak. 
-         Sadece “container/card” sınıfları genişlik ve padding için güncellendi. -->
+    
 
     <!-- WARME SPEISEN – Kart -->
 <div id="warme" class="mx-auto w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl">
@@ -172,9 +171,9 @@ body {
     </ul>
   </article>
 
-  <!-- Bilgilendirme şeridi -->
-  <div class="mt-6 rounded-2xl bg-sky-50 ring-1 ring-sky-100 px-4 sm:px-6 lg:px-8 py-4">
-    <p class="text-sky-900/90">
+  
+  <div class="mt-6 rounded-2xl bg-pink-50 ring-1 ring-pink-100 px-4 sm:px-6 lg:px-8 py-4">
+    <p class="text-red-900/90">
       Alle frittierten Gerichte werden mit AirFries zubereitet (ohne Fett). Wir bitten daher um
       <span class="font-extrabold">20-25 Minuten</span> Zubereitungszeit.
     </p>
@@ -255,7 +254,7 @@ body {
       <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Matcha Latte Caramel</span><span class="shrink-0 text-base font-semibold text-slate-800">7,20 €</span></li>
       <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Matcha Latte Vanille</span><span class="shrink-0 text-base font-semibold text-slate-800">7,20 €</span></li>
       <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Cappuccino</span><span class="shrink-0 text-base font-semibold text-slate-800">klein: 4,40 € &nbsp; gross: 4,90 €</span></li>
-      <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Flat White</span><span class="shrink-0 text-base font-semibold text-slate-800">4,90 €</span></li>
+      <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Flat White</span><span class="shrink-0 text-base font-semibold text-slate-800">4,60 €</span></li>
       <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Chai Latte</span><span class="shrink-0 text-base font-semibold text-slate-800">5,50 €</span></li>
       <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Heiße Schokolade</span><span class="shrink-0 text-base font-semibold text-slate-800">4,20 €</span></li>
       <li class="flex justify-between py-3"><span class="text-lg font-semibold text-slate-900">Kinder Schokolade</span><span class="shrink-0 text-base font-semibold text-slate-800">3,70 €</span></li>
@@ -269,10 +268,11 @@ body {
     </ul>
   </article>
 
-  <!-- Hinweis -->
-  <p class="mt-4 rounded-xl bg-sky-50 px-4 py-3 text-sm text-sky-900">
-    Sie können alle unsere Kaffeesorten auch Entkoffeiniert bestellen.
-  </p>
+<div class="mt-6 rounded-2xl bg-sky-50 ring-1 ring-sky-100 px-4 sm:px-6 lg:px-8 py-4">
+    <p class="text-sky-900/90">
+      Sie können alle unsere Kaffeesorten auch Entkoffeiniert bestellen.
+    </p>
+  </div>
 </div>
 
 <!-- ALKOHOLFREIE GETRÄNKE (3 SÜTUN – tipografi dessert kartıyla aynı) -->
@@ -303,7 +303,7 @@ body {
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Fritz Rhabarberschorle</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,33L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">3,40 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Fritz Traubenschorle</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,33L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">3,40 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Fritz Kola <sup class="ml-1 align-super text-xs font-medium text-slate-500">1,2,4</sup></h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,33L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">3,40 €</p></div></div>
-      <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Fritz Kola Ohne Zucker <sup class="ml-1 align-super text-xs font-medium text-slate-500">1,4,6,7</sup></h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,33L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">3,40 €</p></div></div>
+      <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Fritz Kola Ohne Zucker <sup class="ml-1 align-super text-xs font-medium text-slate-500">1,2,4,6,7</sup></h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,33L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">3,40 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Vio – Stilles Wasser</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,2L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">1,90 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Vio – Spritzig</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,2L</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">2,80 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Eiskaffee</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,3</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">6,90 €</p></div></div>
@@ -313,34 +313,49 @@ body {
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Iced Matcha Latte Vanille</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,3</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">7,20 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Iced Latte</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,3</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">6,90 €</p></div></div>
       <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Iced Cappuccino</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,3</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">6,90 €</p></div></div>
-      <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Ice Shakes</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,5</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">6,90 €</p></div></div>
+      <div class="py-3"><div class="grid grid-cols-[minmax(0,1fr),88px,96px] sm:grid-cols-[minmax(0,1fr),120px,100px] gap-3 items-center"><h3 class="pr-3 text-lg font-semibold text-slate-900 leading-tight">Ice Shakes</h3><div class="text-right text-sm font-medium text-slate-500 tabular-nums whitespace-nowrap">0,3</div><p class="text-right text-base font-semibold text-slate-800 tabular-nums whitespace-nowrap">6,90 €</p></div></div>
 
     </div>
   </article>
 
-  <p class="mt-4 rounded-xl bg-sky-50 px-4 py-3 text-sm text-sky-900">
-    Alle Preise in Euro und inkl. Mehrwertsteuer.
-  </p>
+  <div class="mt-6 rounded-2xl bg-sky-50 ring-1 ring-sky-100 px-4 sm:px-6 lg:px-8 py-4">
+    <p class="text-sky-900/90">
+      Alle Preise in Euro und inkl. Mehrwertsteuer.
+    </p>
+  </div>
+
 </div>
 
+
+
 <!-- ALLERGENE -->
+
+
+
 <div id="allergene" class="mx-auto w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mt-14">
   <h2 class="text-center text-2xl sm:text-3xl font-extrabold text-sky-900">Allergene</h2>
-  <p class="mt-4 rounded-xl bg-teal-100 px-4 py-3 text-sm text-slate-800">
-    A: glutenhaltiges Getreide (z.B. Weizen); B: Fisch; E: Ei; F: Milch (einschl. Laktose); H: Schalenfrüchte (Nüsse)<br>
-    Weitere mögliche Zusätze: Soja, Sesam, Krebstiere, Weichtiere, Formfleisch.<br><br>
+  
+  <div class="mt-6 rounded-2xl bg-teal-100 ring-1 ring-sky-100 px-4 sm:px-6 lg:px-8 py-4">
+    <p class="text-gray-900/90">
+      A: glutenhaltiges Getreide (z. B. Weizen) B: Fisch E: Eier F: Milch (einschl. Laktose) H: Schalenfrüchte (Nüsse)Weitere mögliche Zutaten: Soja, Sesam, Krebstiere, Weichtiere, Formfleisch<br><br>
     Bei Fragen zu Allergenen wenden Sie sich bitte an unser Personal.
-  </p>
+    </p>
+  </div>
+  
 </div>
 
 <!-- ZUSATZSTOFFE -->
 <div id="zusatzstoffe" class="mx-auto w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mt-14 mb-20">
   <h2 class="text-center text-2xl sm:text-3xl font-extrabold text-sky-900">Zusatzstoffe</h2>
-  <p class="mt-4 rounded-xl bg-cyan-100 px-4 py-3 text-sm text-slate-800">
-    1: mit Farbstoff; 2: Coffeinhaltig; 4: Säuerungsmittel; 6: mit Süßstoff; 7: enthält eine Phenylalaninquelle;
-    9: Stabilisatoren Schwefeldioxid, Sulfite, Lupinen, Antioxidationsmittel, Phosphat, Konservierungsmittel<br><br>
+  
+  <div class="mt-6 rounded-2xl bg-cyan-100 ring-1 ring-sky-100 px-4 sm:px-6 lg:px-8 py-4">
+    <p class="text-gray-900/90">
+      1: mit Farbstoff, 2: Coffeinhaltig, 4: Säuerungsmittel, 6: mit Süßstoff,  7: enthält eine Phenylalaninquelle, 9: Stabilisatoren
+Schwefeldioxid, Sulfite, Lupinen, Antioxidationsmittel, Phosphat, Konservierungsmittel<br><br>
     nach VO (EU) 1169/2011 (LMIV)
-  </p>
+    </p>
+  </div>
+  
 </div>
 
   </div>
@@ -351,10 +366,10 @@ body {
   .menu-tab {
     position: relative;
     padding: .25rem .5rem;
-    color: #0f172a;
+    color: #6d28d9;
   }
   .menu-tab:hover { color: #0369a1; }
-  .menu-tab.active { color: #6d28d9; }
+  .menu-tab.active { color: #0f172a; }
   .menu-tab.active::after {
     content: "";
     position: absolute;
