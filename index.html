@@ -942,9 +942,14 @@ body {
         <label class="inline-flex items-start gap-3">
           <input id="consent" type="checkbox" class="mt-1 size-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500" required checked>
           <span class="text-sm text-slate-600">
-            Ich erkläre mich mit der einmaligen Verwendung meiner Daten, zum Zwecke der Kontaktaufnahme einverstanden
-            und habe die <a href="javascript:void(0)" onclick="openModal('modal-datenschutz')" class="font-semibold text-sky-700 underline underline-offset-2">Datenschutzerklärung</a> gelesen.
-          </span>
+  Ich erkläre mich mit der einmaligen Verwendung meiner Daten, zum Zwecke der Kontaktaufnahme einverstanden
+  und habe die 
+  <a href="javascript:void(0)" 
+     onclick="openModal('modal-datenschutz', { src: 'images/gdpr.txt' })" 
+     class="font-semibold text-sky-700 underline underline-offset-2">
+     Datenschutzerklärung
+  </a> gelesen.
+</span>
         </label>
         <p class="mt-1 hidden text-sm text-red-600" data-error-for="consent">Bitte stimmen Sie der Datenschutzerklärung zu.</p>
       </div>
@@ -1162,7 +1167,7 @@ body {
       <div class="flex items-center gap-6 text-sm font-medium text-slate-800">
   <a href="javascript:void(0)" onclick="openModal('modal-impressum')" class="hover:text-sky-700 transition">Impressum</a>
   <span class="hidden sm:block h-4 w-px bg-slate-200"></span>
-  <a href="javascript:void(0)" onclick="openModal('modal-datenschutz')" class="hover:text-sky-700 transition">Datenschutzerklärung</a>
+  <a href="#" onclick="openModal('modal-datenschutz', { src: 'images/gdpr.txt' }); return false;" class="hover:text-sky-700 transition">Datenschutzerklärung</a>
   <span class="hidden sm:block h-4 w-px bg-slate-200"></span>
   <a href="javascript:void(0)" onclick="openModal('modal-haftung')" class="hover:text-sky-700 transition">Haftungsausschluss</a>
 </div>
@@ -1195,7 +1200,7 @@ body {
 <!-- Datenschutzerklärung -->
 <div id="modal-datenschutz" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 p-6">
   <div class="relative w-full max-w-3xl rounded-2xl bg-white p-8 shadow-xl overflow-y-auto max-h-[90vh]">
-    <!-- Close button -->
+    <!-- Close -->
     <button onclick="closeModal('modal-datenschutz')" class="absolute top-4 right-4 text-slate-500 hover:text-slate-700">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -1204,26 +1209,45 @@ body {
 
     <h2 class="text-2xl font-bold text-sky-900 mb-6">Datenschutzerklärung</h2>
 
-    
+    <!-- İçeriğin düşeceği yer -->
     <div id="gdpr-content"
-         class="prose max-w-none text-slate-700 text-sm leading-relaxed whitespace-pre-wrap"></div>
+         class="prose max-w-none text-slate-700 text-sm leading-relaxed"
+         data-embed></div>
   </div>
 </div>
 
 <script>
-  
-  (function loadGdpr() {
-    fetch('images/gdpr.txt', { cache: 'no-store' })
-      .then(r => r.ok ? r.text() : Promise.reject(r))
-      .then(txt => {
-        // whitespace-pre-wrap kullandığımız için satır sonları korunur
-        document.getElementById('gdpr-content').textContent = txt;
-      })
-      .catch(() => {
-        document.getElementById('gdpr-content').textContent =
-          'Die Datenschutzerklärung konnte nicht geladen werden.';
-      });
-  })();
+  function openModal(id, opt = {}) {
+    const el = document.getElementById(id);
+    el.classList.remove('hidden');
+    el.classList.add('flex');
+    document.body.classList.add('overflow-hidden');
+
+    // Lazy-load: içerik daha önce yüklenmediyse getir
+    if (opt.src) {
+      const target = el.querySelector('[data-embed]');
+      if (target && !target.dataset.loaded) {
+        fetch(opt.src, { cache: 'no-store' })
+          .then(r => r.text())
+          .then(html => {
+            // Güvenlik için <script> etiketlerini çıkar
+            html = html.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '');
+            target.innerHTML = html;      // << HTML olarak yerleştir
+            target.dataset.loaded = '1';
+          })
+          .catch(() => {
+            target.innerHTML = '<p class="text-red-600">Inhalt konnte nicht geladen werden.</p>';
+          });
+      }
+    }
+  }
+
+  function closeModal(id) {
+    const el = document.getElementById(id);
+    el.classList.add('hidden');
+    el.classList.remove('flex');
+    document.body.classList.remove('overflow-hidden');
+  }
 </script>
 
 <!-- Haftungsausschluss -->
