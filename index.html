@@ -986,15 +986,15 @@ body {
   };
 
   form.addEventListener('submit', async (e) => {
-    // Tarayıcı doğrulaması (required).
+    // Tarayıcıdaki "required" kontrolleri de çalışsın
     if (!form.checkValidity()) return;
 
     e.preventDefault();
     ok.classList.add('hidden');
     fail.classList.add('hidden');
-
     ['firstName','lastName','email','phone','message','consent','recaptcha'].forEach(hideError);
 
+    // reCAPTCHA token
     const token = (window.grecaptcha && grecaptcha.getResponse()) || '';
     if (!token) { showError('recaptcha'); return; }
 
@@ -1002,21 +1002,63 @@ body {
 
     try {
       const data = new FormData(form);
+      // Formspark reCAPTCHA için zorunlu alan
       data.set('g-recaptcha-response', token);
 
-      const res = await fetch(form.action, { method: 'POST', body: data });
-      if (res.ok || res.status === 302) {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        // ÖNEMLİ: JSON kabul ederek 200 + JSON almaya zorluyoruz
+        headers: { 'Accept': 'application/json' },
+        mode: 'cors',
+        credentials: 'omit'
+      });
+
+      // 200: JSON gelir
+      if (res.ok) {
+        // (İstersen burada const json = await res.json(); kontrol edebilirsin)
         form.reset();
         if (window.grecaptcha) grecaptcha.reset();
         ok.classList.remove('hidden');
-      } else {
-        showError('recaptcha'); // veya fail
-        fail.classList.remove('hidden');
+        return;
       }
-    } catch {
+
+      // 302: bazen redirect döner (bazı ortamlarda)
+      if (res.status === 302) {
+        form.reset();
+        if (window.grecaptcha) grecaptcha.reset();
+        ok.classList.remove('hidden');
+        return;
+      }
+
+      // 422 – alan doğrulama hatası / yanlış içerik
+      if (res.status === 422) {
+        showError('recaptcha');
+        fail.classList.remove('hidden');
+        return;
+      }
+
+      // 429 – çok hızlı test (rate limit) → biraz bekleyip tekrar deneyin
+      if (res.status === 429) {
+        fail.textContent = 'Zu viele Versuche. Bitte warten Sie einen Moment und versuchen Sie es erneut.';
+        fail.classList.remove('hidden');
+        return;
+      }
+
+      // Diğer durumlar → ayrıntıyı göster (geliştirici için)
+      const txt = await res.text().catch(()=>'');
+      console.warn('Formspark:', res.status, txt);
+      if (txt.includes('spam') || res.headers.get('formspark-status') === 'spam') {
+        fail.textContent = 'Ihre Nachricht wurde als Spam eingestuft. Bitte versuchen Sie es erneut.';
+      }
+      fail.classList.remove('hidden');
+
+    } catch (err) {
+      console.error(err);
       fail.classList.remove('hidden');
     } finally {
-      btn.disabled = false; spin.classList.add('hidden');
+      btn.disabled = false;
+      spin.classList.add('hidden');
     }
   });
 })();
