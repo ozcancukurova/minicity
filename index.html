@@ -866,9 +866,10 @@ body {
   </div>
 </section>
 
-<!-- CONTACT / FORM -->
+<!-- CONTACT / FORM (No JS, direct Formspark submit) -->
 <section id="contact" class="py-16 sm:py-20 lg:py-24">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Heading -->
     <div class="max-w-3xl">
       <h2 class="text-base/7 font-light text-sky-800">IHRE ERFAHRUNG BEI UNS</h2>
       <p class="mt-2 text-5xl font-black tracking-tight text-balance text-gray-900 sm:text-6xl">Schreib uns!</p>
@@ -878,85 +879,88 @@ body {
       </p>
     </div>
 
-    <!-- Alerts -->
-    <div id="form-success" class="mt-6 hidden rounded-2xl bg-green-50 px-4 py-3 text-green-800 ring-1 ring-green-200">
-      Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze.
-    </div>
-    <div id="form-fail" class="mt-6 hidden rounded-2xl bg-red-50 px-4 py-3 text-red-800 ring-1 ring-red-200">
-      Uups! Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.
-    </div>
-
-    <!-- Form -->
-    <form id="contact-form" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
-          action="https://submit-form.com/YvVkOe3ub" method="POST">
+    <!-- Plain HTML form – submits directly to Formspark -->
+    <form
+      action="https://submit-form.com/YvVkOe3ub"
+      method="POST"
+      class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
+    >
+      <!-- (Opsiyonel) Konu -->
       <input type="hidden" name="_subject" value="Neue Nachricht von der Website">
+      <!-- (Opsiyonel) Başarılı olunca kendi sitene dönmek istersen yorum satırını aç -->
+      <!-- <input type="hidden" name="_redirect" value="https://minicity.cafe/#contact?sent=1"> -->
 
       <!-- Honeypot -->
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
 
+      <!-- Vorname -->
       <div>
         <label for="firstName" class="block text-sm font-medium text-slate-700">Vorname</label>
         <input id="firstName" name="Vorname" type="text" autocomplete="given-name"
                class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
                required>
-        <p class="mt-1 hidden text-sm text-red-600" data-error-for="firstName">Bitte geben Sie Ihren Vornamen ein.</p>
       </div>
 
+      <!-- Nachname -->
       <div>
         <label for="lastName" class="block text-sm font-medium text-slate-700">Nachname</label>
         <input id="lastName" name="Nachname" type="text" autocomplete="family-name"
                class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
                required>
-        <p class="mt-1 hidden text-sm text-red-600" data-error-for="lastName">Bitte geben Sie Ihren Nachnamen ein.</p>
       </div>
 
+      <!-- Email -->
       <div>
         <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
         <input id="email" name="Email" type="email" autocomplete="email"
                class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
                required>
-        <p class="mt-1 hidden text-sm text-red-600" data-error-for="email">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
       </div>
 
+      <!-- Telefonnummer -->
       <div>
         <label for="phone" class="block text-sm font-medium text-slate-700">Telefonnummer</label>
         <input id="phone" name="Telefonnummer" type="tel" inputmode="tel"
                class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
                required>
-        <p class="mt-1 hidden text-sm text-red-600" data-error-for="phone">Bitte geben Sie Ihre Telefonnummer ein.</p>
       </div>
 
+      <!-- Nachricht -->
       <div class="sm:col-span-2">
         <label for="message" class="block text-sm font-medium text-slate-700">Nachricht</label>
         <textarea id="message" name="Nachricht" rows="6"
                   class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
                   required></textarea>
-        <p class="mt-1 hidden text-sm text-red-600" data-error-for="message">Bitte schreiben Sie Ihre Nachricht.</p>
       </div>
 
+      <!-- Einverständnis -->
       <div class="sm:col-span-2">
         <label class="inline-flex items-start gap-3">
-          <input id="consent" type="checkbox" class="mt-1 size-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500" required checked>
+          <!-- Formspark tarafında görünmesi için bir isim veriyoruz -->
+          <input id="consent" name="Checkbox-2" type="checkbox" value="on"
+                 class="mt-1 size-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500"
+                 required checked>
           <span class="text-sm text-slate-600">
             Ich erkläre mich mit der einmaligen Verwendung meiner Daten, zum Zwecke der Kontaktaufnahme einverstanden
-            und habe die <a href="javascript:void(0)" onclick="openModal('modal-datenschutz'); return false;" class="font-semibold text-sky-700 underline underline-offset-2">Datenschutzerklärung</a> gelesen.
+            und habe die 
+            <a href="javascript:void(0)" onclick="openModal('modal-datenschutz'); return false;"
+               class="font-semibold text-sky-700 underline underline-offset-2">
+               Datenschutzerklärung
+            </a> gelesen.
           </span>
         </label>
-        <p class="mt-1 hidden text-sm text-red-600" data-error-for="consent">Bitte stimmen Sie der Datenschutzerklärung zu.</p>
       </div>
 
+      <!-- reCAPTCHA v2 checkbox -->
       <div class="sm:col-span-2">
         <div class="g-recaptcha" data-sitekey="6LdcZU0qAAAAAEmlVCU8H37GZ6LotYjldEy-2frW"></div>
-        <p class="mt-2 hidden text-sm text-red-600" data-error-for="recaptcha">Bitte bestätigen Sie, dass Sie kein Roboter sind.</p>
       </div>
 
+      <!-- Submit -->
       <div class="sm:col-span-2 flex items-center gap-4">
-        <button id="submitBtn" type="submit"
-                class="inline-flex items-center gap-2 rounded-full bg-sky-800 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:opacity-60 disabled:cursor-not-allowed transition">
-          <svg id="spinner" class="hidden size-4 animate-spin" viewBox="0 0 24 24" fill="none">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4A4 4 0 004 12z"></path>
-          </svg>
+        <button type="submit"
+                class="inline-flex items-center gap-2 rounded-full bg-sky-800 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 transition">
           <span>Senden</span>
         </button>
         <p class="text-xs text-slate-500">Ohne Ihr Einverständnis werden wir Sie in keiner Weise kontaktieren.</p>
@@ -965,104 +969,8 @@ body {
   </div>
 </section>
 
-<!-- reCAPTCHA (tek kez) -->
+<!-- reCAPTCHA script: sayfada yalnızca BİR kez olsun -->
 <script src="https://www.google.com/recaptcha/api.js?hl=de" async defer></script>
-
-<script>
-(() => {
-  const form = document.getElementById('contact-form');
-  const btn  = document.getElementById('submitBtn');
-  const spin = document.getElementById('spinner');
-  const ok   = document.getElementById('form-success');
-  const fail = document.getElementById('form-fail');
-
-  const showError = id => {
-    const el = document.querySelector('[data-error-for="' + id + '"]');
-    if (el) el.classList.remove('hidden');
-  };
-  const hideError = id => {
-    const el = document.querySelector('[data-error-for="' + id + '"]');
-    if (el) el.classList.add('hidden');
-  };
-
-  form.addEventListener('submit', async (e) => {
-    // Tarayıcıdaki "required" kontrolleri de çalışsın
-    if (!form.checkValidity()) return;
-
-    e.preventDefault();
-    ok.classList.add('hidden');
-    fail.classList.add('hidden');
-    ['firstName','lastName','email','phone','message','consent','recaptcha'].forEach(hideError);
-
-    // reCAPTCHA token
-    const token = (window.grecaptcha && grecaptcha.getResponse()) || '';
-    if (!token) { showError('recaptcha'); return; }
-
-    btn.disabled = true; spin.classList.remove('hidden');
-
-    try {
-      const data = new FormData(form);
-      // Formspark reCAPTCHA için zorunlu alan
-      data.set('g-recaptcha-response', token);
-
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        // ÖNEMLİ: JSON kabul ederek 200 + JSON almaya zorluyoruz
-        headers: { 'Accept': 'application/json' },
-        mode: 'cors',
-        credentials: 'omit'
-      });
-
-      // 200: JSON gelir
-      if (res.ok) {
-        // (İstersen burada const json = await res.json(); kontrol edebilirsin)
-        form.reset();
-        if (window.grecaptcha) grecaptcha.reset();
-        ok.classList.remove('hidden');
-        return;
-      }
-
-      // 302: bazen redirect döner (bazı ortamlarda)
-      if (res.status === 302) {
-        form.reset();
-        if (window.grecaptcha) grecaptcha.reset();
-        ok.classList.remove('hidden');
-        return;
-      }
-
-      // 422 – alan doğrulama hatası / yanlış içerik
-      if (res.status === 422) {
-        showError('recaptcha');
-        fail.classList.remove('hidden');
-        return;
-      }
-
-      // 429 – çok hızlı test (rate limit) → biraz bekleyip tekrar deneyin
-      if (res.status === 429) {
-        fail.textContent = 'Zu viele Versuche. Bitte warten Sie einen Moment und versuchen Sie es erneut.';
-        fail.classList.remove('hidden');
-        return;
-      }
-
-      // Diğer durumlar → ayrıntıyı göster (geliştirici için)
-      const txt = await res.text().catch(()=>'');
-      console.warn('Formspark:', res.status, txt);
-      if (txt.includes('spam') || res.headers.get('formspark-status') === 'spam') {
-        fail.textContent = 'Ihre Nachricht wurde als Spam eingestuft. Bitte versuchen Sie es erneut.';
-      }
-      fail.classList.remove('hidden');
-
-    } catch (err) {
-      console.error(err);
-      fail.classList.remove('hidden');
-    } finally {
-      btn.disabled = false;
-      spin.classList.add('hidden');
-    }
-  });
-})();
-</script>
 
 <section id="address" class="py-16 sm:py-20 lg:py-24" style="background-color: #eeeef5;">
   <div class="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
