@@ -975,6 +975,28 @@ body {
   <p class="text-xs text-slate-500">Ohne Ihr Einverständnis werden wir Sie in keiner Weise kontaktieren.</p>
 </div>
     </form>
+    
+    
+    <form action="https://submit-form.com/YvVkOe3ub" method="POST">
+  <input type="hidden" name="_subject" value="Neue Nachricht von der Website">
+  <!-- (İstersen) gönderim sonrası geri dönmek için -->
+  <!-- <input type="hidden" name="_redirect" value="https://minicity.cafe/#contact?sent=1"> -->
+  <!-- Honeypot -->
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
+  <label>Vorname<input name="Vorname" required></label>
+  <label>Nachname<input name="Nachname" required></label>
+  <label>Email<input type="email" name="Email" required></label>
+  <label>Telefonnummer<input name="Telefonnummer" required></label>
+  <label>Nachricht<textarea name="Nachricht" required></textarea></label>
+
+  <!-- reCAPTCHA v2 checkbox -->
+  <div class="g-recaptcha" data-sitekey="6LdcZU0qAAAAAEmlVCU8H37GZ6LotYjldEy-2frW"></div>
+
+  <button type="submit">Senden</button>
+</form>
+<script src="https://www.google.com/recaptcha/api.js?hl=de" async defer></script>
+    
   </div>
 </section>
 
