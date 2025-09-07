@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<!-- ✅ BASIC SEO -->
+	<title>Minicity Kindercafé – Indoor-Spielplatz & Geburtstage in Berlin</title>
+	<meta name="description" content="Minicity Kindercafé – Neuer Indoor-Spielplatz & Familiencafé in Berlin. Sicherer Spielspaß für Kinder, guter Kaffee für Eltern. Geburtstage & private Feiern einfach reservieren." />
+	<link rel="canonical" href="https://minicity.cafe/" />
+	<meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Minicity Kindercafé – Indoor-Spielplatz & Geburtstage in Berlin" />
+  <meta property="og:description" content="Ein Indoor-Spielplatz-Familiencafé in Berlin für Kindergeburtstage und Feiern." />
+  <meta property="og:image" content="https://minicity.cafe/images/web_mc.png" />
+  <meta property="og:url" content="https://minicity.cafe" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Minicity Kindercafé – Indoor-Spielplatz & Geburtstage in Berlin" />
+  <meta name="twitter:description" content="Ein Indoor-Spielplatz-Familiencafé in Berlin für Kindergeburtstage und Feiern." />
+  <meta name="twitter:image" content="https://minicity.cafe/images/web_mc.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts (örnek: Grandstander) -->
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+
+body {
+      font-family: 'Parkinsans', cursive, sans-serif;
+    }
+    html {
+    scroll-behavior: smooth;
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientMove 5s ease infinite;
+  }
+</style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMC3KNC60G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CMC3KNC60G');
+  </script>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenu = document.getElementById("mobile-menu");
+    const links = mobileMenu.querySelectorAll("a");
+    const closeBtn = mobileMenu.querySelector("[command='close']");
+
+    
+    function closeMenu() {
+      mobileMenu.close();
+    }
+
+   
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+
+    
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeMenu);
+    }
+  });
+</script>
+
+<script>
+(function(){
+  const nav = document.getElementById('navbar');
+  const onScroll = () => {
+    if (window.scrollY > 10) {
+      nav.classList.add('bg-white/95','shadow-md','backdrop-blur');
+      nav.classList.remove('bg-transparent','shadow-none');
+    } else {
+      nav.classList.add('bg-transparent','shadow-none');
+      nav.classList.remove('bg-white/95','shadow-md','backdrop-blur');
+    }
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+<script>
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.getElementById('lightbox')?.classList.add('hidden');
+  });
+</script>
+
+</head>
+
+<body>
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-[100] bg-transparent shadow-none transition-colors duration-300">
+  <nav aria-label="Global" class="w-full flex items-center justify-between px-6 py-4 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="https://minicity.cafe/" class="-m-1.5 p-1.5">
+        <span class="sr-only">Minicity Kindercafé</span>
+        <img src="images/logo-big.png" alt="Minicity Kindercafé" class="h-8 w-auto" />
+      </a>
+    </div>
+
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="#about" class="text-sm/6 font-semibold text-gray-900 hover:text-sky-700 transition">Über uns</a>
+  <a href="#pricing" class="text-sm/6 font-semibold text-gray-900 hover:text-sky-700 transition">Party Pakete</a>
+  <a href="#gallery" class="text-sm/6 font-semibold text-gray-900 hover:text-sky-700 transition">Galerie</a>
+  <a href="#address" class="text-sm/6 font-semibold text-gray-900 hover:text-sky-700 transition">Kontakt</a>
+    </div>
+
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="#contact"
+         class="inline-block rounded-full bg-sky-800 px-6 py-2.5 text-sm font-bold text-white shadow-xs 
+                hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
+         Reservierung <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </nav>
+
+  
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-[110] w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Minicity Kindercafé</span>
+              <img src="images/logo-big.png" alt="" class="h-8 w-auto" />
+            </a>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-sky-400">Über uns</a>
+                <a href="#pricing" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-sky-400">Party Pakete</a>
+                <a href="#gallery" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-sky-400">Galerie</a>
+                <a href="#address" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-sky-400">Kontakt</a>
+              </div>
+              <div class="py-6">
+                <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-sky-400">Reservierung</a>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
+
+
+
+<section id="hero" class="relative pt-20">
+<div class="pointer-events-none absolute inset-0 -z-10 bg-[#F6DDD2]"></div>
+  <div class="pointer-events-none absolute inset-0 -z-10 hidden lg:block bg-[url('images/party.jpg')] bg-cover bg-center"></div>
+
+  <div class="relative mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-8 py-32 sm:py-48 lg:py-56">
+    <div class="max-w-2xl text-left">
+      <div class="hidden sm:mb-8 sm:flex sm:justify-start">
+        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-800 ring-1 ring-white/60 backdrop-blur bg-white/50">
+          <!-- Sommerpause! Wir sehen uns am 9. September-->
+          Wir eröffnen wieder am 9. September! 🎉
+        </div>
+      </div>
+      <h1 class="text-5xl font-extrabold tracking-tight sm:text-7xl 
+           bg-gradient-to-r from-pink-400 via-purple-400 to-sky-900 
+           bg-clip-text text-transparent animate-gradient">
+  Party Pakete für jede Feier
+</h1>
+      <p class="mt-8 text-lg font-medium text-gray-700 sm:text-xl/8">
+        Machen Sie sich keine Sorgen, wir sind in allen Belangen rund um Ihre Feier für Sie da!
+      </p>
+      <div class="mt-10 flex items-center gap-x-6">
+        <a href="#pricing"
+           class="rounded-md bg-sky-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-sky-500">
+           Mehr sehen
+        </a>
+        <a href="#about" class="text-sm font-semibold text-gray-900">
+           Über uns <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="hidden lg:block"></div>
+  </div>
+</section>
+
+
+<script>
+  (function () {
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('bg-white/95','shadow-md');
+        navbar.classList.remove('bg-transparent','shadow-none');
+      } else {
+        navbar.classList.add('bg-transparent','shadow-none');
+        navbar.classList.remove('bg-white/95','shadow-md');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+
+<section id="about" class="py-16 sm:py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl font-extrabold tracking-tight text-sky-900 sm:text-5xl">
+        Was ist MiniCity?
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-600">
+        Es ist der perfekte Treffpunkt für Familien und Kinder. Wir bieten Ihnen einen Raum für kreative Rollenspiele, unterhaltsame Aktivitäten, 
+        indoor-Spiele und köstliche Snacks. Den Kindern wird eine unterhaltsame Zeit geboten und die Familien haben die Möglichkeit sich zu entspannen.
+      </p>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="mt-10 sm:mt-12 lg:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Card 1 -->
+      <article class="rounded-3xl bg-sky-50 ring-1 ring-sky-100 shadow-sm p-6 sm:p-7 lg:p-8">
+        <div class="flex items-start gap-4">
+          
+  			<img src="images/new.png" alt="Neu" class="size-12 rounded-xl object-contain" />
+		  
+          <div>
+            <h3 class="text-2xl font-extrabold leading-tight text-sky-900">
+              Alles ist Neu und Hygienisch
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Wir reinigen täglich den Spielbereich von oben bis unten, sowie alle Spielzeuge.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="rounded-3xl bg-sky-50 ring-1 ring-sky-100 shadow-sm p-6 sm:p-7 lg:p-8">
+        <div class="flex items-start gap-4">
+          
+  			<img src="images/food.png" alt="Mahlzeiten" class="size-12 rounded-xl object-contain" />
+		  
+          <div>
+            <h3 class="text-2xl font-extrabold leading-tight text-sky-900">
+              Gesunde Mahlzeiten
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Wir bereiten unser Essen fettfrei zu, um Ihnen hausgemachte und gesunde Menüs anzubieten.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="rounded-3xl bg-sky-50 ring-1 ring-sky-100 shadow-sm p-6 sm:p-7 lg:p-8">
+        <div class="flex items-start gap-4">
+          
+  			<img src="images/car.png" alt="Verbindung" class="size-12 rounded-xl object-contain" />
+		  
+          <div>
+            <h3 class="text-2xl font-extrabold leading-tight text-sky-900">
+              Verbindung
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Man kann uns mit der U-Bahn, der S-Bahn und dem Bus erreichen. Wir sind wirklich gut und einfach erreichbar.
+            </p>
+          </div>
+        </div>
+      </article>
+      
+      <!-- Card 4 -->
+      <article class="rounded-3xl bg-sky-50 ring-1 ring-sky-100 shadow-sm p-6 sm:p-7 lg:p-8">
+        <div class="flex items-start gap-4">
+         
+  			<img src="images/baby.png" alt="Baby" class="size-12 rounded-xl object-contain" />
+		  
+          <div>
+            <h3 class="text-2xl font-extrabold leading-tight text-sky-900">
+              Auch für Babys ist gesorgt
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Wir haben einen separaten Wickelraum und Stillecke für Sie und Ihr Baby, ebenso auch Hochstühle.
+            </p>
+          </div>
+        </div>
+      </article>
+      <!-- Card 5 -->
+      <article class="rounded-3xl bg-sky-50 ring-1 ring-sky-100 shadow-sm p-6 sm:p-7 lg:p-8">
+        <div class="flex items-start gap-4">
+          
+  			<img src="images/heart.png" alt="Eltern" class="size-12 rounded-xl object-contain" />
+		  
+          <div>
+            <h3 class="text-2xl font-extrabold leading-tight text-sky-900">
+              Wir sind auch Eltern
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Wir bemühen uns, eine Umgebung zu schaffen, wie wir sie auch gerne mit unseren eigenen Kindern besuchen würden.
+            </p>
+          </div>
+        </div>
+      </article>
+      <!-- Card 6 -->
+      <article class="rounded-3xl bg-sky-50 ring-1 ring-sky-100 shadow-sm p-6 sm:p-7 lg:p-8">
+        <div class="flex items-start gap-4">
+          
+  			<img src="images/events.png" alt="Events" class="size-12 rounded-xl object-contain" />
+		 
+          <div>
+            <h3 class="text-2xl font-extrabold leading-tight text-sky-900">
+              Events
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Manchmal reicht Spielen alleine nicht aus, wir haben auch immer wieder Events bei uns im Cafe.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+   
+  </div>
+</section>
+
+<section id="pricing" class="px-6 lg:px-8" style="background-color: #fff8ee;">
+<div class="relative isolate px-6 py-24 sm:py-32 lg:px-8">
+  <div aria-hidden="true" class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
+    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="mx-auto aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"></div>
+  </div>
+  <div class="mx-auto max-w-7xl text-center">
+    <h2 class="text-base/7 font-light text-sky-800">DEINE ENTSCHEIDUNG</h2>
+    <p class="mt-2 text-5xl font-black tracking-tight text-balance text-gray-900 sm:text-6xl">Party Pakete</p>
+  </div>
+  <p class="mx-auto mt-6 max-w-2xl text-center text-lg font-normal text-pretty text-gray-600 sm:text-xl/8">Wir haben noch viele weitere Möglichkeiten für Sie. Um mehr über unseren privaten Partyraum und andere Optionen zu erfahren, senden Sie uns bitte eine E-Mail.</p>
+  
+  <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-7xl lg:grid-cols-3">
+  
+  
+  <div class="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 lg:rounded-l-3xl lg:rounded-r-none">
+    
+    <p class="mt-4 flex items-baseline gap-x-2">
+      <span class="text-5xl font-bold tracking-tight text-gray-900">16,00 €</span>
+      <span class="text-base text-gray-500">/pro Kind</span>
+    </p>
+    <p class="mt-6 text-base/7 text-gray-600">MINI PARTY</p>
+    <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        2 Stunden Spielzeit für alle Kinder
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Ein Glas Getränk nach Wahl (Apfelsaft, Orangensaft oder Wasser) 0.2 L pro Kind
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Dekorierter Tisch für die Kinder gemäß dem ausgewählten Thema
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Fotowand "Happy Birthday"
+      </li>
+    </ul>
+  </div>
+
+  
+  <div class="rounded-3xl bg-gray-900 p-8 shadow-2xl ring-1 ring-gray-900/10">
+  		<span class="inline-block rounded-full bg-indigo-800 px-4 py-1 text-sm font-bold text-white ring-0 ring-indigo-600">
+  			AM BELIEBTESTEN
+		</span>
+    <p class="mt-4 flex items-baseline gap-x-2">
+      <span class="text-5xl font-bold tracking-tight text-white">36,00 €</span>
+      <span class="text-base text-gray-500">/pro Kind</span>
+    </p>
+    <p class="mt-6 text-base/7 text-gray-300">CAKE PACK</p>
+    <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        2 Stunden Spielzeit für alle Kinder
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Ein Glas Getränk nach Wahl (Apfelsaft, Orangensaft oder Wasser) 0.2 L pro Kind
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Dekorierter Tisch für die Kinder gemäß dem ausgewählten Thema
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Eine Portion Pommes mit Nuggets/Fischstäbchen oder Nudeln
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Eine Kugel italienisches Eis
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Kuchen passend zum Partymotto
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-400"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Fotowand "Happy Birthday"
+      </li><br>
+    </ul>
+  </div>
+
+  
+  <div class="rounded-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 lg:rounded-r-3xl lg:rounded-l-none">
+
+    <span class="inline-block rounded-full bg-indigo-800 px-4 py-1 text-sm font-bold text-white ring-0 ring-indigo-600">
+  			BELIEBT
+		</span>
+    <p class="mt-4 flex items-baseline gap-x-2">
+      <span class="text-5xl font-bold tracking-tight text-gray-900">24,00 €</span>
+      <span class="text-base text-gray-500">/pro Kind</span>
+    </p>
+    <p class="mt-6 text-base/7 text-gray-600">MAXI PARTY</p>
+    <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        2 Stunden Spielzeit für alle Kinder
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Ein Glas Getränk nach Wahl (Apfelsaft, Orangensaft oder Wasser) 0.2 L pro Kind
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Dekorierter Tisch für die Kinder gemäß dem ausgewählten Thema
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Eine Portion Pommes mit Nuggets/Fischstäbchen oder Nudeln
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Eine Kugel italienisches Eis
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-5 flex-none text-indigo-600"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd"/></svg>
+        Fotowand "Happy Birthday"
+      </li>
+      
+    </ul>
+  </div>
+  
+</div>
+
+
+<div class="mx-auto max-w-6xl mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+  
+  <!-- Sol kart -->
+  <article class="w-full rounded-3xl bg-transparent p-8 ring-1 ring-gray-300 text-left">
+    <p class="mt-2 text-4xl font-black tracking-tight text-gray-900">
+      Zusätzlich buchbare Optionen
+    </p>
+    <p class="mt-4 text-base/7 text-gray-600">
+      Auf Anfrage bieten wir Ihnen:
+    </p>
+    <ul role="list" class="mt-6 space-y-3 text-sm/6 text-gray-700">
+      <li class="flex gap-x-3">Geburtstagstorten</li>
+      <li class="flex gap-x-3">Einladungskarten</li>
+      <li class="flex gap-x-3">Ballon Girlande nach Motto</li>
+      <li class="flex gap-x-3">Animation</li>
+      <li class="flex gap-x-3">Gesichtsbemalung</li>
+    </ul>
+    <a href="#"
+       aria-describedby="tier-enterprise"
+       class="mt-8 inline-block rounded-full bg-sky-800 px-6 py-2.5 text-sm font-bold text-white shadow-xs hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 sm:mt-10">
+       Sprechen Sie uns gerne an!
+    </a>
+  </article>
+
+  <!-- Sağ kart -->
+  <article class="w-full rounded-3xl bg-transparent p-8 ring-1 ring-gray-300 text-left">
+    <p class="mt-2 text-4xl font-black tracking-tight text-gray-900">Eintrittspreise</p>
+    <p class="mt-4 text-base/7 text-gray-600">
+      Wie jeder Gastronom müssen wir unsere Existenz aufrechterhalten, daher bitten wir um Verständnis, dass es eine Eintrittsgebühr gibt.
+    </p>
+    <p class="mt-4 text-base/7 text-gray-800 font-bold">
+      Erwachsene zahlen keinen Eintritt.
+    </p>
+    <ul role="list" class="mt-6 space-y-3 text-sm/6 text-gray-700">
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-5 flex-none text-sky-500"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>
+        Di. - Fr. 1 Std.: 3,00 €
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-5 flex-none text-sky-500"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>
+        Sa. - So., sowie Feiertags 1 Std.: 4,00 €
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-5 flex-none text-sky-500"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>
+        Kleinkinder bis 1 Jahr 2 €
+      </li>
+      <li class="flex gap-x-3">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-5 flex-none text-sky-500"><path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>
+        je angefangene Stunde 1,00 €
+      </li>
+    </ul>
+  </article>
+</div>
+
+</div>
+</section>
+
+<!-- FAQ / Accordion Section -->
+<section id="faq" class="py-16 sm:py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Heading -->
+    <h2 class="text-center text-4xl sm:text-5xl font-extrabold tracking-tight text-sky-900">
+      Häufigsten Fragen
+    </h2>
+
+    <!-- Accordion wrapper (card look) -->
+    <div class="mt-8 rounded-3xl ring-1 ring-gray-200 bg-white/60">
+      <!-- Item 1 (open by default) -->
+      <details open class="group border-t first:border-t-0 border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Unsere Hausordnung</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600 space-y-3">
+          <p>Wir empfehlen Stoppersocken (ABS Socken) für die Kinder während des Aufenthaltes, da in unserem Café keine Straßenschuhe gestattet ist. Für Erwachsene stellen wir Hausschuhe zur Verfügung.</p>
+          <p>Wir möchten euch bitten, eure Kinderwagen, Fahrräder, Laufräder und Co vor dem Café zu parken. Grund: Aus Hygiene Gründen, wir haben spielende Kinder auf dem Boden.</p>
+          <p>Vielen Dank für euer Verständnis und eure Unterstützung!</p>
+        </div>
+      </details>
+
+      <!-- Item 2 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Muss ich für einen Besuch eine Reservierung vornehmen?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Sie müssen keine Reservierung vornehmen. Es empfiehlt sich 30 Minuten vorher anzurufen und sich Informieren.</p>
+        </div>
+      </details>
+
+      <!-- Item 3 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Kann ich hier eine Geburtstagsfeier veranstalten?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Gerne könnt ihr die Geburtstagsfeier von euren Liebsten bei uns feiern. Wir beraten euch gern und passen uns euren Wünsche an und versuchen es für die Kleinen unvergesslich zu machen.</p>
+        </div>
+      </details>
+
+      <!-- Item 4 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Für welche Altersgruppe ist das Kindercafé geeignet?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Unser Konzept ist für Kinder von 1-6 Jahren gedacht, aber natürlich ist jede/r bei uns herzlich willkommen.</p>
+        </div>
+      </details>
+
+      <!-- Item 5 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Gibt es eine Eintrittsgebühr?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Vom 15.05 .2025 bis 01.09.2025 ist der Eintritt KOSTENFREI! Danach, wie jeder Gastronom müssen wir unsere Existenz aufrechterhalten, daher bitten wir um Verständnis, dass es eine Eintrittsgebühr gibt.</p>
+        </div>
+      </details>
+
+      <!-- Item 6 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Ist Essen von außerhalb erlaubt?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Das Mitbringen von Essen/eigenen Speisen ist nicht gestattet.</p>
+        </div>
+      </details>
+
+      <!-- Item 7 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Kann ich mein Kind im Café abgeben?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Wir weisen ausdrücklich darauf hin, dass Kinder nur in Begleitung eines Erwachsenen Zutritt haben. Eltern haften für ihre Kinder.</p>
+        </div>
+      </details>
+
+      <!-- Item 8 -->
+      <details class="group border-t border-gray-200">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-8 py-5 sm:py-6">
+          <span class="text-base sm:text-lg font-extrabold text-sky-900">Kann ich meine eigene Dekoration für eine Geburtstagsfeier mitbringen?</span>
+          <svg class="size-5 shrink-0 text-sky-700 transition-transform duration-300 group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" />
+          </svg>
+        </summary>
+        <div class="px-5 sm:px-8 pb-6 sm:pb-8 text-slate-600">
+          <p>Wir bitten euch um Verständnis, dass wir uns vorbehalten, die Dekoration selber auszurichten. Gerne können wir aber in Absprache eure Wünsche versuchen umzusetzen.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-16 sm:py-20 lg:py-24 bg-slate-50" style="background-color: #eef5f5;">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Heading -->
+    <h2 class="text-center text-4xl sm:text-5xl font-extrabold tracking-tight text-sky-900">
+      Hier ist es immer bunt, <br>laut und lustig! 
+    </h2>
+    <!-- Grid -->
+    <div
+      id="gallery-grid"
+      class="mt-10 sm:mt-12 grid grid-cols-1 gap-4 sm:gap-6 lg:gap-8
+             sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
+    >
+      <!-- Big tile (spans 2x2 on lg) -->
+      <button data-index="0" class="group relative overflow-hidden rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500 lg:col-span-2 lg:row-span-2">
+        <img src="images/gallery-1.jpg" alt="Bällebad" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      </button>
+
+      <!-- Small tiles -->
+      <button data-index="1" class="group relative overflow-hidden rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <img src="images/gallery-2.jpg" alt="Geburtstagskuchen" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      </button>
+
+      <button data-index="2" class="group relative overflow-hidden rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <img src="images/gallery-3.jpg" alt="Café-Vitrine" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      </button>
+
+      <button data-index="3" class="group relative overflow-hidden rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <img src="images/gallery-4.jpg" alt="Kaffeemaschine" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      </button>
+
+      <button data-index="4" class="group relative overflow-hidden rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <img src="images/gallery-5.jpg" alt="Indoor-Spielbereich" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+      </button>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX (overlay) -->
+  <div id="lightbox" class="fixed inset-0 z-[120] hidden" role="dialog" aria-modal="true">
+    <!-- backdrop -->
+    <div class="absolute inset-0 bg-black/90"></div>
+
+    <!-- content -->
+    <div class="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-4">
+      <!-- top bar -->
+      <div class="absolute right-4 top-4">
+        <button id="lb-close" class="rounded-md p-2 text-white/90 ring-1 ring-white/20 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white">
+          ✕
+        </button>
+      </div>
+
+      <!-- main image -->
+      <img id="lb-image" src="" alt="" class="max-h-[78vh] w-auto max-w-[92vw] rounded-2xl shadow-2xl" />
+
+      <!-- prev / next -->
+      <button id="lb-prev"
+              class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white ring-1 ring-white/20 backdrop-blur hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white">
+        ‹
+      </button>
+      <button id="lb-next"
+              class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/10 p-3 text-white ring-1 ring-white/20 backdrop-blur hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white">
+        ›
+      </button>
+
+      <!-- thumbnails -->
+      <div id="lb-thumbs" class="mt-6 flex w-full gap-3 overflow-x-auto px-2 pb-2">
+        <!-- thumbnails will be injected -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    
+    const images = [
+      { src: 'images/gallery-1.jpg', alt: 'Bällebad' },
+      { src: 'images/gallery-2.jpg', alt: 'Geburtstagskuchen' },
+      { src: 'images/gallery-3.jpg', alt: 'Café-Vitrine' },
+      { src: 'images/gallery-4.jpg', alt: 'Kaffeemaschine' },
+      { src: 'images/gallery-5.jpg', alt: 'Indoor-Spielbereich' }
+    ];
+
+    // ---- DOM ----
+    const grid = document.getElementById('gallery-grid');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-image');
+    const lbPrev = document.getElementById('lb-prev');
+    const lbNext = document.getElementById('lb-next');
+    const lbClose = document.getElementById('lb-close');
+    const lbThumbs = document.getElementById('lb-thumbs');
+
+    let current = 0;
+
+    // Build thumbnails once
+    images.forEach((img, idx) => {
+      const btn = document.createElement('button');
+      btn.className =
+        'shrink-0 overflow-hidden rounded-xl ring-2 ring-transparent hover:ring-white/40 focus:outline-none';
+      btn.setAttribute('data-idx', idx);
+      btn.innerHTML =
+        `<img src="${img.src}" alt="${img.alt}" class="h-16 w-24 object-cover">`;
+      lbThumbs.appendChild(btn);
+    });
+
+    function setActive(i) {
+      current = (i + images.length) % images.length;
+      const { src, alt } = images[current];
+      lbImg.src = src;
+      lbImg.alt = alt;
+
+      // highlight active thumb
+      lbThumbs.querySelectorAll('button').forEach((b, idx) => {
+        b.classList.toggle('ring-white', idx === current);
+      });
+    }
+
+    function openLightbox(i) {
+      setActive(i);
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // lock scroll
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Grid click
+    grid.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-index]');
+      if (!btn) return;
+      openLightbox(parseInt(btn.dataset.index, 10));
+    });
+
+    // Controls
+    lbPrev.addEventListener('click', () => setActive(current - 1));
+    lbNext.addEventListener('click', () => setActive(current + 1));
+    lbClose.addEventListener('click', closeLightbox);
+
+    // Click outside to close
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Thumbs click
+    lbThumbs.addEventListener('click', (e) => {
+      const b = e.target.closest('button[data-idx]');
+      if (!b) return;
+      setActive(parseInt(b.dataset.idx, 10));
+    });
+
+    // Keyboard
+    window.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') setActive(current - 1);
+      if (e.key === 'ArrowRight') setActive(current + 1);
+    });
+  })();
+</script>
+
+<section id="whatsapp" class="relative isolate py-16 sm:py-20 lg:py-24">
+  <!-- Background image -->
+  <div class="absolute inset-0 -z-10">
+    <img src="images/whatsapp-bg.jpg" alt="" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/30"></div> <!-- opsiyonel overlay -->
+  </div>
+
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 text-center lg:text-left">
+      <!-- Left text -->
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">
+          Brauchen Sie<br>schnell Antworten?
+        </h2>
+      </div>
+
+      <!-- Right button -->
+      <div class="flex justify-center lg:justify-end">
+        <a href="https://wa.me/4915234834187"
+   target="_blank"
+   class="inline-flex items-center gap-2 rounded-full bg-green-500 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-green-600 transition">
+  <!-- WhatsApp Icon (white) -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="h-5 w-5">
+    <path d="M16 .4A15.6 15.6 0 0 0 .4 16c0 2.8.7 5.5 2 7.9L0 32l8.4-2.2c2.3 1.2 4.9 1.9 7.6 1.9A15.6 15.6 0 1 0 16 .4zm0 28.5c-2.5 0-4.9-.7-7-2.1l-.5-.3-5 1.3 1.3-4.9-.3-.5a12.6 12.6 0 1 1 23.3-6.6c0 7-5.8 12.7-12.8 12.7zm7.1-9.6c-.4-.2-2.3-1.1-2.7-1.3s-.6-.2-.9.2c-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1s-1.7-.6-3.3-2c-1.2-1.1-2-2.5-2.2-2.9-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.5-.6.2-.2.1-.5 0-.7s-.9-2.2-1.2-3c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.2 1.3 3.7 1.5 3.9c.2.2 2.6 4 6.2 5.6.9.4 1.6.6 2.1.8.9.3 1.7.3 2.3.2.7-.1 2.3-1 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+  </svg>
+  Chat on WhatsApp
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FORM -->
+<section id="contact" class="py-16 sm:py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Heading -->
+    
+    <div class="max-w-3xl">
+      <h2 class="text-base/7 font-light text-sky-800">IHRE ERFAHRUNG BEI UNS</h2>
+      <p class="mt-2 text-5xl font-black tracking-tight text-balance text-gray-900 sm:text-6xl">Schreib uns!</p>
+      <p class="mt-4 text-slate-600">
+        Für alle Party-Pakete und Vorschläge stehen wir Ihnen jederzeit gerne zur Verfügung.
+        Füllen Sie einfach dieses Formular aus und wir werden Sie so schnell wie möglich anrufen.
+      </p>
+    </div>
+
+    <!-- Alerts -->
+    <div id="form-success" class="mt-6 hidden rounded-2xl bg-green-50 px-4 py-3 text-green-800 ring-1 ring-green-200">
+      Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze.
+    </div>
+    <div id="form-fail" class="mt-6 hidden rounded-2xl bg-red-50 px-4 py-3 text-red-800 ring-1 ring-red-200">
+      Uups! Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.
+    </div>
+
+    <!-- Form -->
+    <form id="contact-form" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
+          action="https://submit-form.com/YvVkOe3ub" method="POST" novalidate>
+      
+      <input type="hidden" name="_subject" value="Neue Nachricht von der Website">
+
+      <!-- Vorname -->
+      <div>
+        <label for="firstName" class="block text-sm font-medium text-slate-700">Vorname</label>
+        <input id="firstName" name="Vorname" type="text" autocomplete="given-name"
+               class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
+               required>
+        <p class="mt-1 hidden text-sm text-red-600" data-error-for="firstName">Bitte geben Sie Ihren Vornamen ein.</p>
+      </div>
+
+      <!-- Nachname -->
+      <div>
+        <label for="lastName" class="block text-sm font-medium text-slate-700">Nachname</label>
+        <input id="lastName" name="Nachname" type="text" autocomplete="family-name"
+               class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
+               required>
+        <p class="mt-1 hidden text-sm text-red-600" data-error-for="lastName">Bitte geben Sie Ihren Nachnamen ein.</p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+        <input id="email" name="Email" type="email" autocomplete="email"
+               class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
+               required>
+        <p class="mt-1 hidden text-sm text-red-600" data-error-for="email">Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
+      </div>
+
+      <!-- Telefonnummer -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-slate-700">Telefonnummer</label>
+        <input id="phone" name="Telefonnummer" type="tel" inputmode="tel"
+               class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none">
+      </div>
+
+      <!-- Nachricht -->
+      <div class="sm:col-span-2">
+        <label for="message" class="block text-sm font-medium text-slate-700">Nachricht</label>
+        <textarea id="message" name="Nachricht" rows="6"
+                  class="mt-2 w-full rounded-xl border-slate-300 px-3.5 py-2 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-sky-500 outline-none"
+                  required></textarea>
+        <p class="mt-1 hidden text-sm text-red-600" data-error-for="message">Bitte schreiben Sie Ihre Nachricht.</p>
+      </div>
+
+      <!-- Einverständnis -->
+      <div class="sm:col-span-2">
+        <label class="inline-flex items-start gap-3">
+          <input id="consent" type="checkbox" class="mt-1 size-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500" required checked>
+          <span class="text-sm text-slate-600">
+            Ich erkläre mich mit der einmaligen Verwendung meiner Daten, zum Zwecke der Kontaktaufnahme einverstanden
+            und habe die <a href="#" class="font-semibold text-sky-700 underline underline-offset-2">Datenschutzerklärung</a> gelesen.
+          </span>
+        </label>
+        <p class="mt-1 hidden text-sm text-red-600" data-error-for="consent">Bitte stimmen Sie der Datenschutzerklärung zu.</p>
+      </div>
+
+      <!-- reCAPTCHA (checkbox v2) -->
+      <div class="sm:col-span-2">
+        <div id="recaptcha" class="g-recaptcha" data-sitekey="6LdcZU0qAAAAAEmIVCU8H37GZGLoTylJdEy-2rfw"></div>
+        <p class="mt-2 hidden text-sm text-red-600" data-error-for="recaptcha">Bitte bestätigen Sie, dass Sie kein Roboter sind.</p>
+      </div>
+
+      <!-- Submit -->
+      <div class="sm:col-span-2 flex items-center gap-4">
+  <button id="submitBtn" type="submit"
+          class="inline-flex items-center gap-2 rounded-full bg-sky-800 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 disabled:opacity-60 disabled:cursor-not-allowed transition">
+    <svg id="spinner" class="hidden size-4 animate-spin" viewBox="0 0 24 24" fill="none">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4A4 4 0 004 12z"></path>
+    </svg>
+    <span>Senden</span>
+  </button>
+  <p class="text-xs text-slate-500">Ohne Ihr Einverständnis werden wir Sie in keiner Weise kontaktieren.</p>
+</div>
+    </form>
+  </div>
+</section>
+
+<!-- Google reCAPTCHA v2 -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    const btn  = document.getElementById('submitBtn');
+    const spin = document.getElementById('spinner');
+    const ok   = document.getElementById('form-success');
+    const fail = document.getElementById('form-fail');
+
+    function showError(id) {
+      const el = document.querySelector('[data-error-for="' + id + '"]');
+      if (el) el.classList.remove('hidden');
+    }
+    function hideError(id) {
+      const el = document.querySelector('[data-error-for="' + id + '"]');
+      if (el) el.classList.add('hidden');
+    }
+    function validateEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.classList.add('hidden');
+      fail.classList.add('hidden');
+
+      // basic validations
+      let valid = true;
+      const firstName = document.getElementById('firstName');
+      const lastName  = document.getElementById('lastName');
+      const email     = document.getElementById('email');
+      const message   = document.getElementById('message');
+      const consent   = document.getElementById('consent');
+
+      // reset errors
+      ['firstName','lastName','email','message','consent','recaptcha'].forEach(hideError);
+
+      if (!firstName.value.trim()) { showError('firstName'); valid = false; }
+      if (!lastName.value.trim())  { showError('lastName');  valid = false; }
+      if (!validateEmail(email.value.trim())) { showError('email'); valid = false; }
+      if (!message.value.trim())   { showError('message');   valid = false; }
+      if (!consent.checked)        { showError('consent');   valid = false; }
+
+      // reCAPTCHA
+      const token = (window.grecaptcha && grecaptcha.getResponse()) || '';
+      if (!token) { showError('recaptcha'); valid = false; }
+
+      if (!valid) return;
+
+      // submit via fetch to Formspark
+      btn.disabled = true; spin.classList.remove('hidden');
+
+      try {
+        const data = new FormData(form);
+        // include recaptcha response explicitly (Formspark checks server-side)
+        data.set('g-recaptcha-response', token);
+
+        const res = await fetch(form.action, { method: 'POST', body: data });
+        if (res.ok) {
+          form.reset();
+          if (window.grecaptcha) grecaptcha.reset();
+          ok.classList.remove('hidden');
+        } else {
+          fail.classList.remove('hidden');
+        }
+      } catch (err) {
+        fail.classList.remove('hidden');
+      } finally {
+        btn.disabled = false; spin.classList.add('hidden');
+      }
+    });
+  })();
+</script>
+
+<section id="address" class="py-16 sm:py-20 lg:py-24" style="background-color: #eeeef5;">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    
+    <!-- Sol: Google Maps -->
+    <div class="rounded-2xl overflow-hidden shadow-md">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9720.966809168694!2d13.3388038!3d52.4747593!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85117232373c3%3A0xe5bf624023474154!2sMinicity%20Kindercaf%C3%A9!5e0!3m2!1sen!2sde!4v1695457447016!5m2!1sen!2sde" 
+              width="100%" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Sağ: Address info -->
+    <div class="text-left lg:pl-8">
+      
+       <h2 class="text-base/7 font-light text-sky-800 uppercase">Besuchen Sie uns</h2>
+      <h2 class="mt-2 text-4xl font-extrabold tracking-tight text-sky-900">Verbindung</h2>
+      <p class="mt-4 text-base text-gray-700">
+        Minicity braucht keinen Reisepass! Besuchen Sie uns, wann immer Sie wollen! 
+        <br>(außer montags, dann haben wir geschlossen)
+      </p>
+
+      <!-- Öffnungszeiten -->
+      <div class="mt-6 space-y-2 text-gray-800">
+        <p class="flex items-center gap-2">
+          <span class="text-red-500">⏰</span> Di-Fr : 14:00 – 19:00
+        </p>
+        <p class="flex items-center gap-2">
+          <span class="text-red-500">⏰</span> Sa-So : 11:00 – 19:00
+        </p>
+        <p class="mt-2 text-sm text-gray-500">
+          Die aktuellen Öffnungszeiten findet ihr immer auf Google.
+        </p>
+      </div>
+
+      <!-- Adresse -->
+      <p class="mt-6 flex items-center gap-2 text-gray-800">
+        <span>📍</span> 
+        <a href="https://maps.google.com/?q=Hauptstraße+73,+12159+Berlin" target="_blank" class="font-semibold text-sky-700 hover:underline">
+          Adresse: Hauptstraße 73, 12159 Berlin
+        </a>
+      </p>
+
+      <!-- Buttons -->
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a href="tel:+4915234834187" 
+           class="inline-flex items-center justify-center rounded-full bg-sky-900 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-sky-700 transition">
+          Anruf: +49 152 34834187
+        </a>
+        <a href="https://wa.me/4915234834187"
+           target="_blank"
+           class="inline-flex items-center gap-2 rounded-full bg-green-500 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-green-600 transition">
+          <!-- WhatsApp Icon (white) -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="h-5 w-5">
+            <path d="M16 .4A15.6 15.6 0 0 0 .4 16c0 2.8.7 5.5 2 7.9L0 32l8.4-2.2c2.3 1.2 4.9 1.9 7.6 1.9A15.6 15.6 0 1 0 16 .4zm0 28.5c-2.5 0-4.9-.7-7-2.1l-.5-.3-5 1.3 1.3-4.9-.3-.5a12.6 12.6 0 1 1 23.3-6.6c0 7-5.8 12.7-12.8 12.7zm7.1-9.6c-.4-.2-2.3-1.1-2.7-1.3s-.6-.2-.9.2c-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1s-1.7-.6-3.3-2c-1.2-1.1-2-2.5-2.2-2.9-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.5-.6.2-.2.1-.5 0-.7s-.9-2.2-1.2-3c-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.2 1.3 3.7 1.5 3.9c.2.2 2.6 4 6.2 5.6.9.4 1.6.6 2.1.8.9.3 1.7.3 2.3.2.7-.1 2.3-1 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-white">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 py-8">
+    <!-- ÜST SATIR -->
+    <div class="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="shrink-0 inline-flex items-center">
+        <img src="images/logo-small.png" alt="Minicity Kindercafé" class="h-16 w-auto">
+      </a>
+
+      <!-- Orta: menü -->
+      <nav class="flex items-center gap-6 text-sm font-semibold text-slate-800">
+        <a href="#about" class="hover:text-sky-700 transition">Über uns</a>
+        <span class="hidden sm:block h-4 w-px bg-slate-200"></span>
+        <a href="#gallery" class="hover:text-sky-700 transition">Galerie</a>
+        <span class="hidden sm:block h-4 w-px bg-slate-200"></span>
+        <a href="#pricing" class="hover:text-sky-700 transition">Party Pakete</a>
+      </nav>
+
+
+
+      
+      <div class="flex items-center gap-6">
+        <a href="https://www.facebook.com/minicity.cafe" target="_blank" class="text-slate-700 hover:text-sky-600 transition">
+    <i class="fa-brands fa-facebook fa-xl"></i>
+  </a>
+  <a href="https://www.instagram.com/minicity.kindercafe/" target="_blank" class="text-slate-700 hover:text-sky-600 transition">
+    <i class="fa-brands fa-instagram fa-xl"></i>
+  </a>
+  <a href="https://www.tiktok.com/@minicity.cafe" target="_blank" class="text-slate-700 hover:text-sky-600 transition">
+    <i class="fa-brands fa-tiktok fa-xl"></i>
+  </a>
+      </div>
+    </div>
+
+    
+    <div class="mt-6 h-px w-full bg-slate-200"></div>
+
+    
+    <div class="mt-6 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-sm text-slate-600">
+  Copyright ©<span id="year"></span> Minicity Kindercafé
+</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+      <div class="flex items-center gap-6 text-sm font-medium text-slate-800">
+  <a href="javascript:void(0)" onclick="openModal('modal-impressum')" class="hover:text-sky-700 transition">Impressum</a>
+  <span class="hidden sm:block h-4 w-px bg-slate-200"></span>
+  <a href="javascript:void(0)" onclick="openModal('modal-datenschutz')" class="hover:text-sky-700 transition">Datenschutzerklärung</a>
+  <span class="hidden sm:block h-4 w-px bg-slate-200"></span>
+  <a href="javascript:void(0)" onclick="openModal('modal-haftung')" class="hover:text-sky-700 transition">Haftungsausschluss</a>
+</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<!-- Impressum -->
+<div id="modal-impressum" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 p-6">
+  <div class="relative w-full max-w-2xl rounded-2xl bg-white p-8 shadow-xl overflow-y-auto max-h-[90vh]">
+    <!-- Close button -->
+    <button onclick="closeModal('modal-impressum')" class="absolute top-4 right-4 text-slate-500 hover:text-slate-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <h2 class="text-2xl font-bold text-sky-900 mb-6">Impressum</h2>
+    <p class="font-bold">Unsere Daten</p>
+    <p class="mt-2"><span class="font-bold">Seitenbetreiber/ Verantwortlicher:</span><br>
+      Birgül Kavutçu & Sinem Çukurova</p>
+    <p class="mt-2"><span class="font-bold">Anschrift:</span><br>
+      Hauptstraße 73, 12159 Berlin</p>
+    <p class="mt-2"><span class="font-bold">Kontakt:</span><br>
+      info@minicity.cafe<br>Tel: +4915234834187</p>
+    <p class="mt-2"><span class="font-bold">Steuernummer:</span> in Beantragung</p>
+  </div>
+</div>
+
+<!-- Datenschutzerklärung -->
+<div id="modal-datenschutz" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 p-6">
+  <div class="relative w-full max-w-3xl rounded-2xl bg-white p-8 shadow-xl overflow-y-auto max-h-[90vh]">
+    <!-- Close button -->
+    <button onclick="closeModal('modal-datenschutz')" class="absolute top-4 right-4 text-slate-500 hover:text-slate-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <h2 class="text-2xl font-bold text-sky-900 mb-6">Datenschutzerklärung</h2>
+    <div class="prose max-w-none text-slate-700 text-sm leading-relaxed">
+      <!-- ✅ gdpr.txt içeriğini buraya yapıştır -->
+      <?php include 'images/gdpr.txt'; ?>
+    </div>
+  </div>
+</div>
+
+<!-- Haftungsausschluss -->
+<div id="modal-haftung" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 p-6">
+  <div class="relative w-full max-w-3xl rounded-2xl bg-white p-8 shadow-xl overflow-y-auto max-h-[90vh]">
+    <!-- Close button -->
+    <button onclick="closeModal('modal-haftung')" class="absolute top-4 right-4 text-slate-500 hover:text-slate-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <h2 class="text-2xl font-bold text-sky-900 mb-6">Haftungsausschluss</h2>
+    <div class="space-y-4 text-slate-700 text-sm leading-relaxed">
+      <p><span class="font-bold">1. Inhalt des Onlineangebotes</span><br>
+      Der Betreiber dieser Webseite MiniCity übernimmt keine Gewähr für die Aktualität, Vollständigkeit, Qualität oder Richtigkeit der bereitgestellten Informationen. Haftungsansprüche gegen den Betreiber, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des Betreibers kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.</p>
+      <p><span class="font-bold">2. Verweise und Links</span><br>
+      Die Webseite des Cafés MiniCity enthält Verweise und Links zu externen Webseiten Dritter, auf deren Inhalte der Betreiber keinen Einfluss hat. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Der Betreiber distanziert sich hiermit ausdrücklich von allen Inhalten aller verlinkten Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Betreiber eingerichteten Gästebüchern, Diskussionsforen und Mailinglisten.</p>
+      <p><span class="font-bold">3. Urheberrecht</span><br>
+      Die auf dieser Webseite veröffentlichten Inhalte, Werke und bereitgestellten Informationen unterliegen dem deutschen Urheberrecht. Jede Art der Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung des jeweiligen Urhebers bzw. Autors.</p>
+      <p><span class="font-bold">4. Datenschutz</span><br>
+      Die Nutzung dieser Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Die Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+      <p><span class="font-bold">5. Rechtswirksamkeit dieses Haftungsausschlusses</span><br>
+      Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokuments in ihrem Inhalt und ihrer Gültigkeit davon unberührt.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Modal açma/kapama fonksiyonları
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).classList.add('flex');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('flex');
+    document.getElementById(id).classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
