@@ -10,13 +10,16 @@
 	<meta name="description" content="Minicity Kindercafé – Neuer Indoor-Spielplatz & Familiencafé in Berlin. Sicherer Spielspaß für Kinder, guter Kaffee für Eltern. Geburtstage & private Feiern einfach reservieren." />
 	<link rel="canonical" href="https://minicity.cafe/" />
 	<meta name="robots" content="index,follow" />
+	<meta name="keywords" content="Kindercafé Berlin, Indoor Spielplatz Berlin, Kindergeburtstag Berlin, Familiencafé Berlin, Spielcafé Kinder" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Minicity Kindercafé – Indoor-Spielplatz & Geburtstage in Berlin" />
   <meta property="og:description" content="Ein Indoor-Spielplatz-Familiencafé in Berlin für Kindergeburtstage und Feiern." />
   <meta property="og:image" content="https://minicity.cafe/images/web_mc.png" />
-  <meta property="og:url" content="https://minicity.cafe" />
+  <meta property="og:url" content="https://minicity.cafe/" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Minicity Kindercafé" />
+  <meta property="og:locale" content="de_DE" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -65,28 +68,18 @@ body {
   </script>
   
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const mobileMenu = document.getElementById("mobile-menu");
-    const links = mobileMenu.querySelectorAll("a");
-    const closeBtn = mobileMenu.querySelector("[command='close']");
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (!mobileMenu) return;
 
-    
-    function closeMenu() {
-      mobileMenu.close();
-    }
+  const links = mobileMenu.querySelectorAll("a");
+  const closeBtn = mobileMenu.querySelector("[command='close']");
 
-   
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        closeMenu();
-      });
-    });
+  function closeMenu() { mobileMenu.close?.(); }
 
-    
-    if (closeBtn) {
-      closeBtn.addEventListener("click", closeMenu);
-    }
-  });
+  links.forEach(link => link.addEventListener("click", closeMenu));
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+});
 </script>
 
 <script>
@@ -192,6 +185,36 @@ silktideCookieBannerManager.updateCookieBannerConfig({
     }
   }
 });
+</script>
+
+<!-- ✅ Structured Data (LocalBusiness) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Minicity Kindercafé",
+  "url": "https://minicity.cafe/",
+  "image": "https://minicity.cafe/images/web_mc.png",
+  "telephone": "+4915234834187",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hauptstraße 73",
+    "postalCode": "12159",
+    "addressLocality": "Berlin",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.4747593,
+    "longitude": 13.3388038
+  },
+  "sameAs": [
+    "https://www.instagram.com/minicity.kindercafe/",
+    "https://www.facebook.com/minicity.cafe",
+    "https://www.tiktok.com/@minicity.cafe"
+  ]
+}
 </script>
 
 </head>
@@ -1262,7 +1285,18 @@ E-Mail-Adresse: <p><a href="mailto:info@minicity.cafe">info@minicity.cafe</a></p
 <p><strong>Löschung und Einschränkung der Verarbeitung: </strong> Wir können die ausgetragenen E-Mail-Adressen bis zu drei Jahren auf Grundlage unserer berechtigten Interessen speichern, bevor wir sie löschen, um eine ehemals gegebene Einwilligung nachweisen zu können. Die Verarbeitung dieser Daten wird auf den Zweck einer möglichen Abwehr von Ansprüchen beschränkt. Ein individueller Löschungsantrag ist jederzeit möglich, sofern zugleich das ehemalige Bestehen einer Einwilligung bestätigt wird. Im Fall von Pflichten zur dauerhaften Beachtung von Widersprüchen behalten wir uns die Speicherung der E-Mail-Adresse alleine zu diesem Zweck in einer Sperrliste (sogenannte "Blocklist") vor.</p>
 <p>Die Protokollierung des Anmeldeverfahrens erfolgt auf Grundlage unserer berechtigten Interessen zu Zwecken des Nachweises seines ordnungsgemäßen Ablaufs. Soweit wir einen Dienstleister mit dem Versand von E-Mails beauftragen, erfolgt dies auf Grundlage unserer berechtigten Interessen an einem effizienten und sicheren Versandsystem.</p>
 <strong>Inhalte:</strong> <p>Informationen zu uns, unseren Leistungen, Aktionen und Angeboten.</p>
-<ul class="m-elements"><li><strong>Verarbeitete Datenarten:</strong> Bestandsdaten (z. B. Namen, Adressen); Kontaktdaten (z. B. E-Mail, Telefonnummern); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, Einwilligungsstatus); Nutzungsdaten (z. .B. besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).</li><li><strong>Betroffene Personen:</strong> Kommunikationspartner.</li><li><strong>Zwecke der Verarbeitung:</strong> Direktmarketing (z. .B. per E-Mail oder postalisch).</li><li class=""><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).</li><li><strong>Widerspruchsmöglichkeit (Opt-Out): </strong>Sie können den Empfang unseres Newsletters jederzeit kündigen, d. .h. Ihre Einwilligungen widerrufen, bzw. dem weiteren Empfang widersprechen. Einen Link zur Kündigung des Newsletters finden Sie entweder am Ende eines jeden Newsletters oder können sonst eine der oben angegebenen Kontaktmöglichkeiten, vorzugswürdig E-Mail, hierzu nutzen.</li></ul><p><strong>Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</strong></p><ul class="m-elements"><li><strong>Messung von Öffnungs- und Klickraten: </strong>Die Newsletter enthalten einen sogenannte "web-beacon", d. h., eine pixelgroße Datei, die beim Öffnen des Newsletters von unserem Server, bzw., sofern wir einen Versanddienstleister einsetzen, von dessen Server abgerufen wird. Im Rahmen dieses Abrufs werden zunächst technische Informationen, wie Informationen zum Browser und Ihrem System, als auch Ihre IP-Adresse und der Zeitpunkt des Abrufs, erhoben. <br><br>Diese Informationen werden zur technischen Verbesserung unseres Newsletters anhand der technischen Daten oder der Zielgruppen und ihres Leseverhaltens auf Basis ihrer Abruforte (die mit Hilfe der IP-Adresse bestimmbar sind) oder der Zugriffszeiten genutzt. Diese Analyse beinhaltet ebenfalls die Feststellung, ob die Newsletter geöffnet werden, wann sie geöffnet werden und welche Links geklickt werden. Diese Informationen werden den einzelnen Newsletterempfängern zugeordnet und in deren Profilen bis zu deren Löschung gespeichert. Die Auswertungen dienen uns dazu, die Lesegewohnheiten unserer Nutzer zu erkennen und unsere Inhalte an sie anzupassen oder unterschiedliche Inhalte entsprechend den Interessen unserer Nutzer zu versenden.<br><br>Die Messung der Öffnungsraten und der Klickraten sowie Speicherung der Messergebnisse in den Profilen der Nutzer<span class="dsg-license-content-blurred de dsg-ttip-activate" title="Bitte geben Sie einen Lizenzschlüssel ein, um die Texte freizuschalten."> - Dieser Textbereich muss mit einer Premium Lizenz freischaltet werden. - premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext premiumtext </span>;<br><span class=""><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).</span></li></ul>
+<ul class="m-elements">
+  <li>
+    <strong>Messung von Öffnungs- und Klickraten: </strong>
+    Die Newsletter enthalten einen sogenannte "web-beacon", d. h., eine pixelgroße Datei, die beim Öffnen des Newsletters von unserem Server, bzw., sofern wir einen Versanddienstleister einsetzen, von dessen Server abgerufen wird. Im Rahmen dieses Abrufs werden zunächst technische Informationen, wie Informationen zum Browser und Ihrem System, als auch Ihre IP-Adresse und der Zeitpunkt des Abrufs, erhoben. 
+    <br><br>
+    Diese Informationen werden zur technischen Verbesserung unseres Newsletters anhand der technischen Daten oder der Zielgruppen und ihres Leseverhaltens auf Basis ihrer Abruforte (die mit Hilfe der IP-Adresse bestimmbar sind) oder der Zugriffszeiten genutzt. Diese Analyse beinhaltet ebenfalls die Feststellung, ob die Newsletter geöffnet werden, wann sie geöffnet werden und welche Links geklickt werden. Diese Informationen werden den einzelnen Newsletterempfängern zugeordnet und in deren Profilen bis zu deren Löschung gespeichert. Die Auswertungen dienen uns dazu, die Lesegewohnheiten unserer Nutzer zu erkennen und unsere Inhalte an sie anzupassen oder unterschiedliche Inhalte entsprechend den Interessen unserer Nutzer zu versenden.
+    <br><br>
+    Die Messung der Öffnungsraten und der Klickraten sowie die Speicherung der Messergebnisse in den Profilen der Nutzer erfolgt auf Grundlage Ihrer Einwilligung.
+    <br>
+    <span class=""><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).</span>
+  </li>
+</ul>
 <h2 id="m638">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</h2><p>Wir verarbeiten personenbezogene Daten zu Zwecken der werblichen Kommunikation, die über diverse Kanäle, wie z. B. E-Mail, Telefon, Post oder Fax, entsprechend den gesetzlichen Vorgaben erfolgen kann.</p>
 <p>Die Empfänger haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen oder der werblichen Kommunikation jederzeit zu widersprechen.</p>
 <p>Nach Widerruf oder Widerspruch speichern wir die zum Nachweis der bisherigen Berechtigung erforderlichen Daten zur Kontaktaufnahme oder Zusendung bis zu drei Jahre nach Ablauf des Jahres des Widerrufs oder Widerspruchs auf der Grundlage unserer berechtigten Interessen. Die Verarbeitung dieser Daten ist auf den Zweck einer möglichen Abwehr von Ansprüchen beschränkt. Auf der Grundlage des berechtigten Interesses, den Widerruf bzw. Widerspruch der Nutzer dauerhaft zu beachten, speichern wir ferner die zur Vermeidung einer erneuten Kontaktaufnahme erforderlichen Daten (z. B. je nach Kommunikationskanal die E-Mail-Adresse, Telefonnummer, Name).</p>
@@ -1339,17 +1373,7 @@ E-Mail-Adresse: <p><a href="mailto:info@minicity.cafe">info@minicity.cafe</a></p
   </div>
 </div>
 
-<script>
-  // Modal açma/kapama fonksiyonları
-  function openModal(id) {
-    document.getElementById(id).classList.remove('hidden');
-    document.getElementById(id).classList.add('flex');
-  }
-  function closeModal(id) {
-    document.getElementById(id).classList.remove('flex');
-    document.getElementById(id).classList.add('hidden');
-  }
-</script>
+
 
 <script>
 (function () {
